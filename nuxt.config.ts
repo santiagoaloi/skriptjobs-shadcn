@@ -38,13 +38,13 @@ export default defineNuxtConfig({
     cookieStore: true,
   },
 
-  nitro: {
-    prerender: {
-      routes: [
-        '/',
-      ],
-    },
-  },
+  // nitro: {
+  //   prerender: {
+  //     routes: [
+  //       '/',
+  //     ],
+  //   },
+  // },
 
   routeRules: {
     '/components': { redirect: '/components/accordion' },
