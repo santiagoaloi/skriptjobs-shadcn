@@ -8,11 +8,11 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     'shadcn-nuxt',
     '@vueuse/nuxt',
-    '@nuxt/eslint',
     '@nuxt/icon',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     'motion-v/nuxt',
+    '@nuxt/eslint',
   ],
 
   css: [
@@ -26,6 +26,11 @@ export default defineNuxtConfig({
   features: {
     // For UnoCSS
     inlineStyles: false,
+    // compatibilityVersion: 4,
+  },
+
+  experimental: {
+    cookieStore: true,
   },
 
   eslint: {
@@ -34,17 +39,14 @@ export default defineNuxtConfig({
     },
   },
 
-  experimental: {
-    cookieStore: true,
+  nitro: {
+    preset: 'vercel-edge',
+    prerender: {
+      routes: [
+        '/',
+      ],
+    },
   },
-
-  // nitro: {
-  //   prerender: {
-  //     routes: [
-  //       '/',
-  //     ],
-  //   },
-  // },
 
   routeRules: {
     '/components': { redirect: '/components/accordion' },

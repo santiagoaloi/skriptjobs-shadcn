@@ -8,6 +8,7 @@ export default withNuxt(antfu(
     stylistic: {
       quotes: 'single',
     },
+
     ignores: [
       'node_modules',
       'public',
